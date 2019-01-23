@@ -63,8 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linLayout"
                 android:orientation="vertical"
-                android:padding="20dp"
-                android:background="@drawable/white_grey_border_bottom">
+                android:padding="20dp">
+                <!--android:background="@drawable/white_grey_border_bottom"-->
 
                 <TextView
                     android:id="@+id/display_name"

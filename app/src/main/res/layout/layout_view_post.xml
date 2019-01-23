@@ -32,7 +32,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:text="User"
                     android:layout_toRightOf="@+id/profile_photo"
                     android:layout_marginLeft="10dp"
@@ -49,7 +49,8 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
-                    android:id="@+id/ivEllipses"/>
+                    android:id="@+id/ivEllipses"
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 

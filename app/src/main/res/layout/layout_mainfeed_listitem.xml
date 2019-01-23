@@ -30,7 +30,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:text="Username"
                     android:layout_toRightOf="@+id/profile_photo"
                     android:layout_marginLeft="10dp"
@@ -47,7 +47,8 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
-                    android:id="@+id/ivEllipses"/>
+                    android:id="@+id/ivEllipses"
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 
@@ -108,16 +109,19 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/relLayout3"
                 android:layout_below="@+id/relLayout2"
-                android:padding="20dp"
-                android:layout_marginBottom="50dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="0dp"
                 android:background="@color/white">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Liked by User1, User2, User3 and 30 others"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:id="@+id/image_likes"/>
 
                 <TextView
@@ -125,33 +129,38 @@
                     android:layout_height="wrap_content"
                     android:text="post description #hashtag1 #hashtag2"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:id="@+id/image_caption"
                     android:layout_below="@+id/image_likes"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="View all 3 comments"
                     android:textColor="@color/grey"
-                    android:textSize="18sp"
+                    android:textSize="12sp"
                     android:layout_below="@+id/image_caption"
                     android:id="@+id/image_comments_link"
-                    android:layout_marginTop="17dp"/>
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3 DAYS AGO"
                     android:textColor="@color/grey"
-                    android:textSize="14sp"
+                    android:textSize="11sp"
                     android:layout_below="@+id/image_comments_link"
                     android:id="@+id/image_time_posted"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginLeft="4dp"/>
+                    android:layout_marginTop="2dp"/>
 
             </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_below="@+id/relLayout3"
+            android:background="#fafafa">
+        </RelativeLayout>
 
 
 

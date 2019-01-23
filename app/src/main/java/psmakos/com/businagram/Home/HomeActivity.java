@@ -171,17 +171,19 @@ public class HomeActivity extends AppCompatActivity implements
      */
     private void setupViewPager(){
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new CameraFragment()); //index 0
-        adapter.addFragment(new HomeFragment()); //index 1
-        adapter.addFragment(new MessagesFragment()); //index 2
+        //adapter.addFragment(new CameraFragment()); //index 0   I commend because is empty page
+        //adapter.addFragment(new HomeFragment()); //index 1
+        //adapter.addFragment(new MessagesFragment()); //index 2
+        adapter.addFragment(new MessagesFragment()); // Delete this
+        adapter.addFragment(new HomeFragment()); // Delete this
         mViewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_camera);
-        tabLayout.getTabAt(1).setIcon(R.drawable.bisnagram_main_logo);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_arrow);
+        //tabLayout.getTabAt(0).setIcon(R.drawable.ic_camera); //Index 0
+        tabLayout.getTabAt(1).setIcon(R.drawable.bisnagram_main_logo); //Index 1
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_arrow); //Index 2
     }
 
     /**

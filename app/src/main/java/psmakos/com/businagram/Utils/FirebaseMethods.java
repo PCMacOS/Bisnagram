@@ -409,6 +409,7 @@ public class FirebaseMethods {
         photo.setDate_created(getTimestamp());
         photo.setImage_path(url);
         photo.setTags(tags);
+        photo.setPlace("");
         photo.setUser_id(FirebaseAuth.getInstance().getCurrentUser().getUid());
         photo.setPhoto_id(newPhotoKey);
 
@@ -585,7 +586,7 @@ public class FirebaseMethods {
      */
     public void addNewUser(String email, String username, String description, String website, String profile_photo){
 
-        User user = new User( userID,  1,  email,  StringManipulation.condenseUsername(username) );
+        User user = new User( userID,  0,  email,  StringManipulation.condenseUsername(username) );
 
         myRef.child(mContext.getString(R.string.dbname_users))
                 .child(userID)

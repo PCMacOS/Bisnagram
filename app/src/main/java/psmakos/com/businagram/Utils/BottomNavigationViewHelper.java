@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -58,9 +59,10 @@ public class BottomNavigationViewHelper {
                         break;
 
                     case R.id.ic_alert:
-                        Intent intent4 = new Intent(context, LikesActivity.class);//ACTIVITY_NUM = 3
-                        context.startActivity(intent4);
-                        callingActivity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        //Intent intent4 = new Intent(context, LikesActivity.class);//ACTIVITY_NUM = 3
+                        //context.startActivity(intent4);
+                        //callingActivity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        Toast.makeText(context,"You don't have new notifications", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.ic_android:

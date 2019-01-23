@@ -19,13 +19,14 @@ public class Photo implements Parcelable {
     private String tags;
     private List<Like> likes;
     private List<Comment> comments;
+    private String place;
 
 
     public Photo() {
 
     }
 
-    public Photo(String caption, String date_created, String image_path, String photo_id,
+    public Photo(String place, String caption, String date_created, String image_path, String photo_id,
                  String user_id, String tags, List<Like> likes, List<Comment> comments) {
         this.caption = caption;
         this.date_created = date_created;
@@ -35,6 +36,7 @@ public class Photo implements Parcelable {
         this.tags = tags;
         this.likes = likes;
         this.comments = comments;
+        this.place = place;
     }
 
     protected Photo(Parcel in) {
@@ -44,6 +46,7 @@ public class Photo implements Parcelable {
         photo_id = in.readString();
         user_id = in.readString();
         tags = in.readString();
+        place = in.readString();
     }
 
     @Override
@@ -54,6 +57,7 @@ public class Photo implements Parcelable {
         dest.writeString(photo_id);
         dest.writeString(user_id);
         dest.writeString(tags);
+        dest.writeString(place);
     }
 
     @Override
@@ -141,6 +145,12 @@ public class Photo implements Parcelable {
         this.likes = likes;
     }
 
+    public String getPlace(){return place;}
+
+    public void setPlace(String place){
+        this.place = place;
+    }
+
     @Override
     public String toString() {
         return "Photo{" +
@@ -151,6 +161,7 @@ public class Photo implements Parcelable {
                 ", user_id='" + user_id + '\'' +
                 ", tags='" + tags + '\'' +
                 ", likes=" + likes +
+                ", place=" + place +
                 '}';
     }
 }

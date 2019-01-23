@@ -478,17 +478,17 @@ public class FirebaseMethods {
      * @param username
      */
     public void updateUsername(String username){
-        Log.d(TAG, "updateUsername: upadting username to: " + username);
+        Log.d(TAG, "updateUsername: upadting username to: " + username.toLowerCase().replace(" ", "."));
 
         myRef.child(mContext.getString(R.string.dbname_users))
                 .child(userID)
                 .child(mContext.getString(R.string.field_username))
-                .setValue(username);
+                .setValue(username.toLowerCase().replace(" ", "."));
 
         myRef.child(mContext.getString(R.string.dbname_user_account_settings))
                 .child(userID)
                 .child(mContext.getString(R.string.field_username))
-                .setValue(username);
+                .setValue(username.toLowerCase().replace(" ", "."));
     }
 
     /**
@@ -586,7 +586,7 @@ public class FirebaseMethods {
      */
     public void addNewUser(String email, String username, String description, String website, String profile_photo){
 
-        User user = new User( userID,  0,  email,  StringManipulation.condenseUsername(username) );
+        User user = new User( userID,  0,  email,  StringManipulation.condenseUsername(username.toLowerCase().replace(" ", ".")) );
 
         myRef.child(mContext.getString(R.string.dbname_users))
                 .child(userID)
@@ -595,12 +595,12 @@ public class FirebaseMethods {
 
         UserAccountSettings settings = new UserAccountSettings(
                 description,
-                username,
+                username.toLowerCase().replace(" ", "."),
                 0,
                 0,
                 0,
                 profile_photo,
-                StringManipulation.condenseUsername(username),
+                StringManipulation.condenseUsername(username.toLowerCase().replace(" ", ".")),
                 website,
                 userID
         );

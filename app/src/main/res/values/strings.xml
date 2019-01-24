@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bisnagram</string>
+    <string name="app_name">Businagram</string>
 
     <!-- fragment names -->
     <string name="edit_profile_fragment">Edit Profile</string>
